@@ -40,6 +40,7 @@ function PlayerContextProvider(props) {
   };
 
   const playWithId = (id) => {
+    if (!isLogin) return;
     const songitem = spotifySongs.find((s) => s.id === id);
     setTrack(songitem);
   };
