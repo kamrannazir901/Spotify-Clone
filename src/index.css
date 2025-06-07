@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+@theme {
+  --color-layout: #121212;
+  --color-box: #1f1f1f;
+  --color-green: #1ed760;
+  --color-green-hover: #3be477;
+  --color-gray: #b8a9bf;
+}
+
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+  user-select: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px inset;
+}
+input:-webkit-autofill {
+  -webkit-text-fill-color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-block;
+
+  font: inherit;
+  background-color: transparent;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid #656565;
+  border-radius: 50%;
+  transition: border 0.2s ease;
+}
+label:hover input[type="radio"] {
+  border-color: #1ed760;
+}
+input[type="radio"]:checked {
+  border: 4px solid #1ed760;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 1rem;
+  height: 1em;
+  border: 1px solid #656565;
+  border-radius: 3px;
+  transition: border 0.2s ease;
+  cursor: pointer;
+  background-color: black;
+
+  transition: border 0.2s ease;
+}
+
+label:hover input[type="checkbox"] {
+  border-color: #1ed760;
+}
+
+input[type="checkbox"]:checked {
+  appearance: auto;
+  accent-color: #1ed760;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+select {
+  appearance: none !important;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  @apply font-bold leading-tight;
+}
+
+h2 {
+  @apply font-bold leading-snug;
+}
+
+h3 {
+  @apply font-bold leading-normal;
+}
+
+p {
+  @apply font-normal leading-relaxed;
+}
+
+.plight {
+  @apply font-light text-[.9rem];
+}
+
+.btn {
+  @apply bg-white text-black rounded-full py-1 px-4 font-bold text-[.9rem] hover:scale-[1.05];
+}
+
+.borderbtn {
+  @apply text-white border rounded-full py-1 px-4 font-bold text-[.9rem] hover:scale-[1.05];
+}
+
+.lighta {
+  @apply text-[#B3B3B3] font-light text-[.75rem] text-nowrap;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+.rounded {
+  @apply rounded-[10px];
+}
+
+.menuicon {
+  @apply text-2xl p-3 rounded-full  transition-all cursor-pointer;
+}
+
+.menu-right-a {
+  @apply text-[#656565] font-bold  hover:text-white;
+}
+
+.menu-right-small-a {
+  @apply text-[#656565] font-bold text-nowrap hover:text-white;
+}
+
+/* home */
+.contentarea {
+  @apply px-8 py-4;
+}
+.bgcontentarea {
+  @apply bg-layout mx-3 rounded;
+}
+
+.s-head {
+  @apply my-3 px-2 text-2xl;
+}
+
+.smallcard {
+  @apply w-[200px] p-[10px] hover:bg-[#1f1f1f];
+}
+
+.cardimgbox {
+  @apply w-[180px] h-[180px] mx-auto mb-[0.6rem];
+}
+
+.cardimgbox img {
+  @apply w-full h-full;
+}
+
+/* search result layout */
+
+.menulinks {
+  @apply bg-box px-3 py-1 rounded-full hover:bg-[#333];
+}
+.menulinks.active {
+  @apply bg-white text-black;
+}
+
+/* front footer */
+
+.footer > div {
+  @apply pb-10 pt-5 flex flex-col gap-4 md:flex-row border-b-[1px] border-[#2f2f2f];
+}
+
+.footer > div > div {
+  @apply flex flex-col gap-2;
+}
+.footer > div > div a {
+  @apply block cursor-pointer text-[#656565] hover:text-white hover:underline;
+}
+
+.footer-socials a {
+  @apply w-10 h-10 text-xl bg-box !text-white rounded-full !grid place-content-center hover:bg-[#2f2f2f];
+}
+
+.footer .copyright {
+  @apply text-[#656565];
+}
+
+/* contentmenu.jsx */
+
+.contectmenudiv {
+  @apply w-fit p-1 bg-box rounded-sm z-50;
+  text-wrap: nowrap;
+}
+
+.contectmenudiv > ul {
+  @apply flex flex-col rounded;
+}
+
+.contectmenudiv ul li {
+  @apply flex justify-between relative items-center rounded-sm gap-2 p-3 hover:bg-[#3e3e3e] text-gray;
+}
+.contectmenudiv ul li div {
+  @apply flex items-center gap-2;
+}
+
+.contectmenudiv ul li:hover > div > p {
+  color: white;
+}
+/* normal icon */
+
+.contectmenudiv ul li div span {
+  @apply text-[1.2rem] text-gray group-hover:text-gray;
+}
+
+/* right arrow icon */
+.contectmenudiv ul li div + span {
+  @apply text-[1rem] text-white;
+}
+
+.contectmenudiv ul li .contectmenudiv {
+  @apply hidden absolute top-0 flex-col rounded border-t-2;
+}
+
+.contectmenudiv ul li:hover > .contectmenudiv {
+  display: flex;
+}
