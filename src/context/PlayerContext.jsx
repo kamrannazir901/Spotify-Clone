@@ -121,7 +121,9 @@ function PlayerContextProvider(props) {
     }, 1000);
 
     return () => {
-      audioRef.current.ontimeupdate = null;
+      if (audioRef.current) {
+        audioRef.current.ontimeupdate = null;
+      }
     };
   }, [track]);
 
