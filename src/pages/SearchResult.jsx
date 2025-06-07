@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { icons } from "../assets/Assets";
 import { items } from "../components/SubComponents/SupportAccordian";
 import Footer from "../components/Footer";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 const spotifyFAQs = [
   {
@@ -95,6 +95,7 @@ function SearchResult() {
 
     items.forEach(findResult);
     setSearchList(results.slice(0, 6));
+    showSearchfaq();
   }, [searchTerm]);
 
   const showSearchfaq = () => {
@@ -176,7 +177,7 @@ function SearchResult() {
                         <a
                           key={i}
                           onMouseDown={() => {
-                            window.location.href = `/article${v.url}`;
+                            window.location.href = `/Spotify-Clone/article${v.url}`;
                           }}
                           className="flex items-center gap-2 py-2 group cursor-pointer"
                         >
@@ -201,7 +202,7 @@ function SearchResult() {
 
                   {searchTerm !== "" && (
                     <div className="flex flex-col gap-2 group">
-                      <a
+                      <Link
                         onMouseDown={() => {
                           navigate(
                             `/search-result?q=${encodeURIComponent(searchTerm)}`
@@ -214,7 +215,7 @@ function SearchResult() {
                         <p className="!font-bold text-sm group-hover:text-[#2E8D50]">
                           {searchTerm}
                         </p>
-                      </a>
+                      </Link>
                     </div>
                   )}
                 </div>
@@ -268,7 +269,7 @@ function SearchResult() {
                       key={i}
                       className="py-6 border-b last:border-none border-[#656565] cursor-pointer group"
                       onMouseDown={(e) => {
-                        window.location.href = `/article${faq.url}`;
+                        window.location.href = `/Spotify-Clone/article${faq.url}`;
                       }}
                     >
                       <h4 className="font-bold group-hover:text-green">

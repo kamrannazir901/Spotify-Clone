@@ -6,7 +6,7 @@ import MyContext from "./context/MyContext.jsx";
 import PlayerContextProvider from "./context/PlayerContext.jsx";
 import DBoperations from "./context/DBoperations.jsx";
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/Spotify-Clone">
     <DBoperations>
       <PlayerContextProvider>
         <MyContext>

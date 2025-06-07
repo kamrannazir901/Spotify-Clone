@@ -13,7 +13,6 @@ import { Link, useLocation } from "react-router-dom";
 export const items = [
   {
     title: "Payments & billing",
-
     icon: <MdPayment />,
     children: [
       {
@@ -30,20 +29,6 @@ export const items = [
           { title: "View payment history", url: "/payments/history" },
         ],
         children: [
-          {
-            title: "Recommended topics",
-            links: [
-              { title: "How billing works", url: "/billing/how-it-works" },
-              { title: "Payment FAQs", url: "/billing/faqs" },
-            ],
-          },
-          {
-            title: "Manage payments",
-            links: [
-              { title: "Update payment info", url: "/payments/update-info" },
-              { title: "View payment history", url: "/payments/history" },
-            ],
-          },
           {
             title: "Payment methods",
             links: [
@@ -352,7 +337,7 @@ const AccordionItem = ({ item, level = 0, links, isLast, iconshow }) => {
           {(level === 0 ? item.links : links).map((v, i) => {
             return (
               <a
-                href={`/article/${v.url.replace(/^\/+/, "")}`}
+                href={`/Spotify-Clone/article/${v.url.replace(/^\/+/, "")}`}
                 className="hover:text-green block w-fit"
                 key={i}
               >
