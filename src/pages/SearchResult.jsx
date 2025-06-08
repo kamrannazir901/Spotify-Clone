@@ -177,7 +177,7 @@ function SearchResult() {
                         <a
                           key={i}
                           onMouseDown={() => {
-                            window.location.href = `/Spotify-Clone/article${v.url}`;
+                            window.location.href = `/article${v.url}`;
                           }}
                           className="flex items-center gap-2 py-2 group cursor-pointer"
                         >
@@ -269,7 +269,7 @@ function SearchResult() {
                       key={i}
                       className="py-6 border-b last:border-none border-[#656565] cursor-pointer group"
                       onMouseDown={(e) => {
-                        window.location.href = `/Spotify-Clone/article${faq.url}`;
+                        window.location.href = `/article${faq.url}`;
                       }}
                     >
                       <h4 className="font-bold group-hover:text-green">

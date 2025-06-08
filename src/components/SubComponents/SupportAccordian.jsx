@@ -337,7 +337,7 @@ const AccordionItem = ({ item, level = 0, links, isLast, iconshow }) => {
           {(level === 0 ? item.links : links).map((v, i) => {
             return (
               <a
-                href={`/Spotify-Clone/article/${v.url.replace(/^\/+/, "")}`}
+                href={`/article/${v.url.replace(/^\/+/, "")}`}
                 className="hover:text-green block w-fit"
                 key={i}
               >

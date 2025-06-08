@@ -104,7 +104,7 @@ function Support() {
                 <a
                   key={i}
                   onMouseDown={() => {
-                    window.location.href = `/Spotify-Clone/article${v.url}`;
+                    window.location.href = `/article${v.url}`;
                   }}
                   className="flex items-center gap-2 py-2 group cursor-pointer"
                 >
