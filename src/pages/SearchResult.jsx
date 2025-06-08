@@ -9,50 +9,50 @@ const spotifyFAQs = [
   {
     question: "Audio quality",
     answer:
-      "Spotify offers different audio quality options based on your device, plan, and preferences. Music quality varies for free and premium users, with podcasts at 96kbit/s (128kbit/s on web).",
-    url: "/billing/how-it-works",
+      "Spotify Premium offers different audio quality settings that you can change in the app’s settings to get the best experience for your device and network.",
+    url: "/premium/settings",
   },
   {
     question: "Play Queue",
     answer:
-      "View and arrange upcoming tracks using the Play Queue. Select your device to learn how to find and modify your queue.",
-    url: "/payments/history",
+      "You can view and arrange upcoming tracks in your Play Queue and control what plays next on your device easily through the Spotify app.",
+    url: "/playlists/create",
   },
   {
     question: "Now Playing view",
     answer:
-      "The Now Playing view lets you control music playback with options to save tracks, shuffle, repeat, and view the play queue. You can also use Spotify Connect to play on other devices.",
-    url: "/payments/update-info",
+      "The Now Playing screen lets you control playback, save tracks, shuffle, repeat, and connect to other devices via Spotify Connect.",
+    url: "/features/getting-started",
   },
   {
     question: "Spotify lock screen widget on iPhone",
     answer:
-      "Add the Spotify widget to your iPhone lock screen for quick access. Requires iOS 16+ and Spotify 8.8.26+. Follow these steps to add the widget.",
-    url: "/payments/paypal",
+      "Add the Spotify widget to your iPhone lock screen for quick access to playback controls and song info. Requires iOS 16+ and Spotify version 8.8.26 or higher.",
+    url: "/devices/watch-setup",
   },
   {
     question: "Start or join a Jam",
     answer:
-      "Spotify Jams allow users to listen and add songs together. Premium users can host, while free users can join. Features include adding/removing users, leaving a Jam, controlling volume, and playback, with troubleshooting tips.",
-    url: "/billing/faqs",
+      "Spotify Jams let premium users host listening sessions with friends, while free users can join and listen together with shared controls.",
+    url: "/social/friends",
   },
   {
     question: "Volume normalization",
     answer:
-      "Volume normalization evens out the loudness of songs, making for a consistent listening experience, and is a feature of Premium.",
-    url: "/charge/unexpected",
+      "Volume normalization makes sure your songs play at a consistent volume level across playlists, which helps provide a smooth listening experience.",
+    url: "/settings/notifications",
   },
   {
     question: "Spotify keyboard shortcuts",
     answer:
-      "The article lists essential keyboard shortcuts for using Spotify on desktop, enhancing user navigation and control.",
-    url: "/payments/credit-cards",
+      "Spotify desktop app supports various keyboard shortcuts to help you control playback, volume, and navigation quickly and easily.",
+    url: "/charge/dispute",
   },
   {
     question: "Autoplay tracks",
     answer:
-      "Spotify's Autoplay feature continues playing music by automatically playing similar songs. This article explains how to turn Autoplay on and off for different devices.",
-    url: "/charge/dispute",
+      "Autoplay automatically plays related songs once your playlist or album ends, helping you discover new music seamlessly.",
+    url: "/premium/duo/invite",
   },
 ];
 

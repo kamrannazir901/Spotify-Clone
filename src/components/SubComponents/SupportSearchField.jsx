@@ -163,7 +163,7 @@ function SupportSearchField({
           <div className="flex flex-col">
             {searchList.map((v, i) => (
               <Link
-                // to={`article${v.url}`}
+                to={`/article${v.url}`}
                 key={i}
                 onMouseDown={(e) => {
                   e.preventDefault();
