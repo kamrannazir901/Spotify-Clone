@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { icons } from "../../assets/Assets";
 import {
   MdPayment,
@@ -32,15 +32,18 @@ export const items = [
           {
             title: "Payment methods",
             links: [
-              { title: "Credit card options", url: "/payments/credit-cards" },
-              { title: "PayPal setup", url: "/payments/paypal" },
+              {
+                title: "Credit card options",
+                url: "/payments/credit-cards-alt1",
+              },
+              { title: "PayPal setup", url: "/payments/paypal-alt1" },
             ],
           },
           {
             title: "Charge help",
             links: [
-              { title: "Dispute a charge", url: "/charge/dispute" },
-              { title: "Unexpected charges", url: "/charge/unexpected" },
+              { title: "Dispute a charge", url: "/charge/dispute-alt1" },
+              { title: "Unexpected charges", url: "/charge/unexpected-alt1" },
             ],
           },
         ],
@@ -82,7 +85,7 @@ export const items = [
       {
         title: "Account settings",
         links: [
-          { title: "Language preferences", url: "/settings/language" },
+          { title: "Language preferences", url: "/settings/language-alt1" },
           { title: "Notification settings", url: "/settings/notifications" },
         ],
       },
@@ -151,7 +154,7 @@ export const items = [
         title: "App settings",
         links: [
           { title: "Theme options", url: "/settings/theme" },
-          { title: "Language selection", url: "/settings/language" },
+          { title: "Language selection", url: "/settings/language-alt2" },
         ],
       },
       {
@@ -261,7 +264,10 @@ export const items = [
         title: "Data rights and privacy choices",
         url: "/privacy/request-data",
       },
-      { title: "Understanding my data", url: "/privacy/delete-account" },
+      {
+        title: "Understanding my data",
+        url: "/privacy/delete-account",
+      },
     ],
   },
 ];
@@ -300,6 +306,10 @@ const AccordionItem = ({ item, level = 0, links, isLast, iconshow }) => {
   const showArrow = childs || item?.links?.length > 0;
   const currentLinks = level === 0 ? item?.links : links;
 
+  useEffect(() => {
+    setOpen(containsUrl(item, targetUrl));
+  }, [targetUrl]);
+
   return (
     <div className={`bg-[#2A2A2A] first:rounded-t last:rounded-b`}>
       {/* question title */}
@@ -336,13 +346,13 @@ const AccordionItem = ({ item, level = 0, links, isLast, iconshow }) => {
         >
           {(level === 0 ? item.links : links).map((v, i) => {
             return (
-              <a
-                href={`/article/${v.url.replace(/^\/+/, "")}`}
+              <Link
+                to={`/article/${v.url.replace(/^\/+/, "")}`}
                 className="hover:text-green block w-fit"
                 key={i}
               >
                 {v.title}
-              </a>
+              </Link>
             );
           })}
         </div>
