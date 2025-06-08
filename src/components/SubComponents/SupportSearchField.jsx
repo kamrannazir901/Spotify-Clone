@@ -162,13 +162,13 @@ function SupportSearchField({
         {searchList.length > 0 && (
           <div className="flex flex-col">
             {searchList.map((v, i) => (
-              <div
+              <Link
                 // to={`article${v.url}`}
                 key={i}
-                onMouseDown={() => {
-                  window.location.href = `${import.meta.env.BASE_URL}article${
-                    v.url
-                  }`;
+                onMouseDown={(e) => {
+                  e.preventDefault();
+                  navigate(`/article${v.url}`);
+                  searchListDiv.current.style.display = "none";
                 }}
                 className="flex items-center gap-2 py-2 group cursor-pointer"
               >
@@ -186,7 +186,7 @@ function SupportSearchField({
                 <p className="!font-bold text-sm text-[#656565] group-hover:text-[#2E8D50]">
                   {v.title}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         )}

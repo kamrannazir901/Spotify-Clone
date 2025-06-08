@@ -24,7 +24,9 @@ function SearchResultLayout() {
   ];
 
   const pathParts = location.pathname.split("/");
-  const currentTab = pathParts[2] || "";
+
+  const currentTab = pathParts[3] || "";
+  console.log(currentTab);
 
   const isInvalidTab = !validTabs.includes(currentTab);
 
@@ -34,8 +36,8 @@ function SearchResultLayout() {
         <NavLink
           to=""
           end
-          className={({ isInvalidTab }) =>
-            `menulinks ${isInvalidTab ? "!bg-white text-black active" : ""}`
+          className={({ isActive }) =>
+            `menulinks ${isActive || isInvalidTab ? "active" : ""}`
           }
         >
           All
