@@ -27,9 +27,9 @@ function App() {
     <Routes>
       <Route path="/" element={<LayoutFront />}>
         <Route index element={<Home />} />
-        <Route path="/download" element={<Install_app />} />
-        <Route path="/premium" element={<Premium />} />
-        <Route path="/support" element={<Support />} />
+        <Route path="download" element={<Install_app />} />
+        <Route path="premium" element={<Premium />} />
+        <Route path="support" element={<Support />} />
         {/* <Route path="/album/:id" element={<Browse />} /> */}
 
         <Route path="search">

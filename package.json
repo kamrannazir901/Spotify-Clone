@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kamrannazir901.github.io/Spotify-Clone",
+  "homepage": "https://kamrannazir901.github.io/Spotify-Clone/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
