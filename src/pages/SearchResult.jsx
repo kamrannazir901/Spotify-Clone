@@ -113,7 +113,7 @@ function SearchResult() {
                 {searchFaqList.map((faq, i) => {
                   return (
                     <Link
-                      to={`/article${faq.url}`}
+                      to={`/article/${faq.url.replace(/^\/+/, "")}`}
                       key={i}
                       className="py-6 border-b last:border-none border-[#656565] cursor-pointer group"
                       // onMouseDown={(e) => {
