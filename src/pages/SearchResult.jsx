@@ -113,13 +113,14 @@ function SearchResult() {
                 {searchFaqList.map((faq, i) => {
                   return (
                     <Link
+                      to={`/article${faq.url}`}
                       key={i}
                       className="py-6 border-b last:border-none border-[#656565] cursor-pointer group"
-                      onMouseDown={(e) => {
-                        window.location.href = `${
-                          import.meta.env.BASE_URL
-                        }article${faq.url}`;
-                      }}
+                      // onMouseDown={(e) => {
+                      //   window.location.href = `${
+                      //     import.meta.env.BASE_URL
+                      //   }article${faq.url}`;
+                      // }}
                     >
                       <h4 className="font-bold group-hover:text-green">
                         {faq.question}
